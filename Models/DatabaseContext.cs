@@ -13,6 +13,7 @@ namespace ClassRecordSystem.Models
         public DbSet<Setting> Settings { get; set; }
         public DbSet<Course> Courses { get; set; }
         public DbSet<Curriculi> Curriculum { get; set; }
+        public DbSet<Student> Students { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             Database.SetInitializer(new Initializer());
@@ -20,6 +21,7 @@ namespace ClassRecordSystem.Models
             modelBuilder.Entity<Setting>().ToTable("Settings", "public");
             modelBuilder.Entity<Course>().ToTable("Courses", "public");
             modelBuilder.Entity<Curriculi>().ToTable("Curriculum", "public");
+            modelBuilder.Entity<Student>().ToTable("Students", "public");
         }
         public class Initializer : IDatabaseInitializer<DatabaseContext>
         {

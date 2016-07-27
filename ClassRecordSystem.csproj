@@ -75,9 +75,11 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Models\Course.cs" />
+    <Compile Include="Models\Curriculi.cs" />
     <Compile Include="Models\DatabaseContext.cs" />
     <Compile Include="Models\MethodsClass.cs" />
     <Compile Include="Models\Setting.cs" />
+    <Compile Include="Models\Student.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\Variables.cs" />
     <Compile Include="Shared\Views\LoginPage.xaml.cs">
