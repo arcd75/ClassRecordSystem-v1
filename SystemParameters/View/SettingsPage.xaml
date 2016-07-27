@@ -1,0 +1,32 @@
+﻿<UserControl xmlns:dxwui="http://schemas.devexpress.com/winfx/2008/xaml/windowsui"  xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"  x:Class="ClassRecordSystem.SystemParameters.View.SettingsPage"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" FontFamily="Segoe UI Light"
+                FontSize="16"
+             d:DesignHeight="500" d:DesignWidth="1000" Loaded="UserControl_Loaded">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="25*"/>
+            <ColumnDefinition Width="75*"/>
+        </Grid.ColumnDefinitions>
+        <Border Grid.Column="0" Margin="0 20 10 20" BorderBrush="#FF5478AC" BorderThickness="1" Background="Transparent">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <dxe:ListBoxEdit x:Name="lbSettings" Grid.Row="1" BorderThickness="0"  SelectedIndexChanged="lbSettings_SelectedIndexChanged" ShowBorder="False">
+                    <dxe:ListBoxEditItem Content="School Profile"/>
+                    <dxe:ListBoxEditItem Content="Grades"/>
+                    <dxe:ListBoxEditItem Content="School Year / Semester"/>
+                    <dxe:ListBoxEditItem Content="Terms"/>
+                </dxe:ListBoxEdit>
+            </Grid>
+        </Border>
+        <Border Grid.Column="1">
+            <dxwui:NavigationFrame x:Name="SettingsFrame" />
+        </Border>
+       
+    </Grid>
+</UserControl>

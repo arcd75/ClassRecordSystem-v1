@@ -1,0 +1,98 @@
+﻿<UserControl xmlns:dxwui="http://schemas.devexpress.com/winfx/2008/xaml/windowsui"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
+      xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+      xmlns:dxca="http://schemas.devexpress.com/winfx/2008/xaml/carousel"  x:Class="ClassRecordSystem.Shared.MainPage"
+      mc:Ignorable="d" 
+      d:DesignHeight="700" d:DesignWidth="1000"
+      FontFamily="Segoe UI Light"
+      FontSize="16"
+             Background="Wheat"
+             Loaded="UserControl_Loaded"
+	>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition/>
+            <RowDefinition Height="40"/>
+        </Grid.RowDefinitions>
+        <DockPanel LastChildFill="False">
+            <StackPanel DockPanel.Dock="Left" VerticalAlignment="Bottom" Orientation="Horizontal" Margin="10">
+                <TextBlock x:Name="txtSchoolName" FontSize="32" Margin="5" FontFamily="Segoe UI"/>
+                <TextBlock Text="Classroom System" VerticalAlignment="Bottom" FontSize="25" Margin="5"/>
+            </StackPanel>
+            <StackPanel DockPanel.Dock="Right" Margin="10" VerticalAlignment="Bottom">
+                <TextBlock x:Name="txtUserName" FontSize="25"/>
+                <TextBlock x:Name="txtAccess"/>
+            </StackPanel>
+        </DockPanel>
+        <Border Grid.Row="1" BorderThickness="0 1" BorderBrush="#FF5478AC" Background="White" >
+            <DockPanel LastChildFill="False">
+                <StackPanel Orientation="Horizontal" x:Name="stackAdmin" Visibility="Collapsed">
+                    <Button x:Name="btnStudents"  BorderThickness="0" Background="Transparent" Padding="10 0">
+                        <Border BorderThickness="0 1">
+                            <TextBlock Text="Students"/>
+                        </Border>
+                    </Button>
+                    <Button x:Name="btnTeachers"  BorderThickness="0" Background="Transparent" Padding="10 0">
+                        <Border BorderThickness="0 1">
+                            <TextBlock Text="Teachers"/>
+                        </Border>
+                    </Button>
+                    <Button x:Name="btnCourses"  BorderThickness="0" Background="Transparent" Padding="10 0">
+                        <Border BorderThickness="0 1">
+                            <TextBlock Text="Courses"/>
+                        </Border>
+                    </Button>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" x:Name="stackTeachers" Visibility="Collapsed">
+                    <Button x:Name="btnStudentsTeacher" DockPanel.Dock="Left" BorderThickness="0" Background="Transparent" Padding="10 0">
+                        <Border BorderThickness="0 1">
+                            <TextBlock Text="Students"/>
+                        </Border>
+                    </Button>
+                    <Button x:Name="btnSections" DockPanel.Dock="Left" BorderThickness="0" Background="Transparent" Padding="10 0">
+                        <Border BorderThickness="0 1">
+                            <TextBlock Text="Sections"/>
+                        </Border>
+                    </Button>
+                    <Button x:Name="btnCLassroomManagement" DockPanel.Dock="Left" BorderThickness="0" Background="Transparent" Padding="10 0">
+                        <Border BorderThickness="0 1">
+                            <TextBlock Text="Courses"/>
+                        </Border>
+                    </Button>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" x:Name="stackStudents" Visibility="Collapsed">
+                    <Button x:Name="btnGrades" DockPanel.Dock="Left" BorderThickness="0" Background="Transparent" Padding="10 0">
+                        <Border BorderThickness="0 1">
+                            <TextBlock Text="Grades"/>
+                        </Border>
+                    </Button>
+                    <Button x:Name="btnActivities" DockPanel.Dock="Left" BorderThickness="0" Background="Transparent" Padding="10 0">
+                        <Border BorderThickness="0 1">
+                            <TextBlock Text="Activities"/>
+                        </Border>
+                    </Button>
+                </StackPanel>
+                    
+                <Button DockPanel.Dock="Right" x:Name="btnLogout" Click="btnLogout_Click" BorderThickness="0" Background="Transparent" Padding="10 0">
+                    <Border BorderThickness="0 1">
+                        <TextBlock Text="Logout"/>
+                    </Border>
+                </Button>
+                <Button DockPanel.Dock="Right" x:Name="btnSettings" Click="btnSettings_Click" BorderThickness="0" Background="Transparent" Visibility="Collapsed" Padding="10 0">
+                    <Border BorderThickness="0 1">
+                        <TextBlock Text="Settings"/>
+                    </Border>
+                </Button>
+            </DockPanel>
+        </Border>
+        <dxwui:NavigationFrame x:Name="mainFrame" Grid.Row="2" />
+        <Grid Grid.Row="3"/>
+
+    </Grid>
+</UserControl>
