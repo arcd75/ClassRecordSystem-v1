@@ -11,12 +11,15 @@ namespace ClassRecordSystem.Models
     {
         public DbSet<User> Users { get; set; }
         public DbSet<Setting> Settings { get; set; }
-
+        public DbSet<Course> Courses { get; set; }
+        public DbSet<Curriculi> Curriculum { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             Database.SetInitializer(new Initializer());
             modelBuilder.Entity<User>().ToTable("Users", "public");
             modelBuilder.Entity<Setting>().ToTable("Settings", "public");
+            modelBuilder.Entity<Course>().ToTable("Courses", "public");
+            modelBuilder.Entity<Curriculi>().ToTable("Curriculum", "public");
         }
         public class Initializer : IDatabaseInitializer<DatabaseContext>
         {

@@ -7,12 +7,11 @@ using System.Threading.Tasks;
 
 namespace ClassRecordSystem.Models
 {
-    public class Course
+    public class Curriculi
     {
         [Key]
-        public int Id { get; set; }
+        public int Course { get; set; }
 
-        public string Name { get; set; }
-        public string Level { get; set; }
+        public int Subject { get; set; }
     }
 }

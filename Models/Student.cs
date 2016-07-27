@@ -7,12 +7,15 @@ using System.Threading.Tasks;
 
 namespace ClassRecordSystem.Models
 {
-    public class Course
+    public class Student
     {
         [Key]
         public int Id { get; set; }
 
-        public string Name { get; set; }
-        public string Level { get; set; }
+        public string USN { get; set; }
+        public string LastName { get; set; }
+        public string FirstName { get; set; }
+        public string MiddleName { get; set; }
+        public int Course { get; set; }
     }
 }
